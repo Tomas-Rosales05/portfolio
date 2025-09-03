@@ -1,11 +1,102 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Badge from '../components/Badge.astro';
+import "../styles/global.css";
+import GitHubIcon from "../icons/GitHubIcon.astro";
+import LinkedinIcon from "../icons/LinkedinIcon.astro";
+import SocialPill from '../icons/SocialPill.astro';
+import EmailIcon from '../icons/EmailIcon.astro';
+import SeccionContainer from "../components/SeccionContainer.astro";
+import Code from '../icons/Code.astro';
+import Projects from '../components/Projects.astro';
+import Footer from '../components/Footer.astro';
+import AboutIcon from '../icons/AboutIcon.astro';
+import HtmlIcon from '../icons/HtmlIcon.astro';
+import CssIcon from '../icons/CssIcon.astro';
+import JavasCriptsIcon from '../icons/JavasCriptsIcon.astro';
+import ReactIcon from "../icons/ReactIcon.astro";
+import SqlIcon from '../icons/SqlIcon.astro';
+import PythonIcon from '../icons/PythonIcon.astro';
+import Django from '../icons/Django.astro';
+import Skill from "../components/Skill.astro";
+import TailwindIcon from '../icons/TailwindIcon.astro';
+import Git from '../icons/Git.astro';
+import JavaIcon from '../icons/JavaIcon.astro';
 ---
 
 <Layout>
-	<Welcome />
+  <main class="py-4">
+    <!-- Hero / Intro -->
+    <SeccionContainer id="/" class="py-44 text-center">
+      <img
+        class="rounded-full w-50  mx-auto mb-6 shadow-lg"
+        src="../src/assets/tomas-rosales.jpg"
+        alt="Tomás Rosales photo"
+      />
+      <h1 class="text-black text-3xl lg:text-5xl font-bold flex flex-col items-center gap-4 pb-10">
+        Hi, I'm Tomás!
+        <a href="https://www.linkedin.com/in/tomasrosales-dev" target="_blank" rel="noopener">
+          <Badge>Available</Badge>
+        </a>
+      </h1>
+      <h2 class="lg:text-xl text-lg text-black opacity-80 max-w-3xl mx-auto leading-relaxed">
+        Student of the <span class="text-blue-500">Bachelor's Degree in Computer Science</span> at the <span class="text-blue-500">Universidad</span>, passionate about <span class="text-blue-500">technology</span>, <span class="text-blue-500">development</span>, and <span class="text-blue-500">continuous learning</span>.<br/>
+        I am motivated to constantly incorporate <span class="text-blue-500">new tools</span> and <span class="text-blue-500">knowledge</span> that allow me to grow as a <span class="text-blue-500">programmer</span> and add <span class="text-blue-500">value</span> to every project.
+      </h2>
+      <nav class="flex gap-4 mt-8 justify-center flex-wrap" aria-label="Socials and contact">
+        <SocialPill href="https://www.linkedin.com/in/tomasrosales-dev">
+          <LinkedinIcon class="w-6 h-6" /> Linkedin
+        </SocialPill>
+        <SocialPill href="https://github.com/Tomas-Rosales05">
+          <GitHubIcon class="w-6 h-6" /> GitHub
+        </SocialPill>
+        <SocialPill href="mailto:tomiirosales2005@gmail.com">
+          <EmailIcon class="w-6 h-6" /> Email
+        </SocialPill>
+      </nav>
+    </SeccionContainer>
+
+    <!-- Technologies -->
+    <SeccionContainer id="technologies" class="mb-10">
+      <h2 class="text-4xl font-semibold mb-12 flex gap-x-3 items-center justify-center">
+        <AboutIcon class="w-10 h-10" /> Technologies
+      </h2>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 justify-items-center max-w-4xl mx-auto">
+        <Skill class="bg-[#e44d26] text-white">
+          <HtmlIcon class="w-10 h-10" /> HTML
+        </Skill>
+        <Skill class="bg-[#264de4] text-white">
+          <CssIcon class="w-10 h-10" /> CSS
+        </Skill>
+        <Skill class="bg-[#f7df1e] text-black">
+          <JavasCriptsIcon class="w-10 h-10" /> JavaScript
+        </Skill>
+        <Skill class="bg-white text-black border border-zinc-300">
+          <ReactIcon class="w-10 h-10" /> React
+        </Skill>
+        <Skill class="bg-[#F05032] text-white">
+          <Git class="w-10 h-10" /> Git
+        </Skill>
+        <Skill class="bg-[#00618A] text-white">
+          <SqlIcon class="w-10 h-10" /> SQL
+        </Skill>
+        <Skill class="bg-[#3776AB] text-white">
+          <PythonIcon class="w-10 h-10" /> Python
+        </Skill>
+        <Skill class="bg-[#092E20] text-white">
+          <Django class="w-10 h-10" /> Django
+        </Skill>
+        <Skill class="bg-[#007396] text-white">
+          <JavaIcon class="w-10 h-10" /> Java
+        </Skill>
+      </div>
+    </SeccionContainer>
+
+    <!-- Projects -->
+    <SeccionContainer id="projects">
+      <Projects />
+    </SeccionContainer>
+  </main>
+  <Footer />
 </Layout>

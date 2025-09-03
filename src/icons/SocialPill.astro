@@ -1,0 +1,14 @@
+---
+const { children } = Astro.slots;
+---
+
+<a
+    
+    href={Astro.props.href}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-black rounded-full border bg-white/5 border-black/10 flex items-center gap-2 py-1 px-2
+            hover:scale-105 hover:bg-black/10 transition lg:py-2 lg:px-4 text-xs lg:text-base "
+>
+    <slot />
+</a>
